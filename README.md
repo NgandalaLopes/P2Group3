@@ -1,1 +1,1 @@
-# One Stop Shop 4 Anime
+# Blog Base Webapp for Anime Beginners
