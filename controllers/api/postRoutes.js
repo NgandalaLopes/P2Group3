@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/post');
+const Post = require('../models/Post');
 
 // CREATE A NEW POST
 router.post('/', async (req, res) => {
@@ -12,9 +12,9 @@ router.post('/', async (req, res) => {
       author
     });
     await post.save();
-    res.status(201).json(post); // return the newly created post
+    res.status(200).json(post); // return the newly created post
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(500).json(err);
   }
 });
 

@@ -2,13 +2,11 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // space for auth0//
 
-
-
-
-
-
-
-
+class User extends Model {
+    checkPassword(loginPw) {
+      return ;// NEED TO ADD RETURN INFO BASED ON AUTH0 DOCUMENTATION
+    }
+}
 
 User.init(
     {
@@ -29,4 +27,13 @@ User.init(
           len: [8],
         },
       },
-    },
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
+  }
+);
+
+module.exports = User;
+
