@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-// space for auth0//
+const { auth, requiresAuth } = require('express-openid-connect');
 
 class User extends Model {
     checkPassword(loginPw) {
