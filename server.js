@@ -1,4 +1,7 @@
 const express = require('express');
+const session = require('express-session');
+const routes = require('./controllers');
+
 const sequelize = require('./config/connection');
 require('dotenv').config();
 
@@ -23,7 +26,7 @@ app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user))
 })
 
-const PORT = process.env.PORT || 3000;
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log('Server listening on: http://localhost:' + PORT);
