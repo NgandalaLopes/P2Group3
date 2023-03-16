@@ -3,6 +3,9 @@ const session = require('express-session');
 const router = express.Router();
 const sequelize = require('./config/connection');
 require('dotenv').config();
+const PORT = process.env.PORT || 3000; // <-- Add this line
+
+
 
 const app = express();
 const { auth, requiresAuth } = require('express-openid-connect');
@@ -13,8 +16,9 @@ app.use(
     issuerBaseURL: process.env.ISSUER_BASE_URL,
     baseURL: process.env.BASE_URL,
     clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     secret: process.env.SECRET,
-  })
+  })  
 );
 
 app.get('/', (req, res) => {
