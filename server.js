@@ -1,7 +1,6 @@
 const express = require('express');
 const session = require('express-session');
 const router = express.Router();
-
 const sequelize = require('./config/connection');
 require('dotenv').config();
 
@@ -26,7 +25,7 @@ app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user))
 })
 
-app.use(routes);
+app.use(router);
 
 app.listen(PORT, () => {
   console.log('Server listening on: http://localhost:' + PORT);
