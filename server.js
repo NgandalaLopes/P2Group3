@@ -3,8 +3,7 @@ const session = require('express-session');
 const router = express.Router();
 const sequelize = require('./config/connection');
 require('dotenv').config();
-const PORT = process.env.PORT || 3000; // <-- Add this line
-
+const PORT = process.env.PORT || 3000;
 
 
 const app = express();
