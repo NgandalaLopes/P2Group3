@@ -18,4 +18,24 @@ router.post('/', async (req, res) => {
   }
 });
 
+// delete a post
+router.delete('/:id', async (req, res) => {
+  try {
+    const postData = await post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: 'No post found with that id!' });
+      return;
+    }
+
+    res.status(200).json(postData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
