@@ -5,9 +5,12 @@ const sequelize = require('./config/connection');
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
-
 const app = express();
 const { auth, requiresAuth } = require('express-openid-connect');
+
+// Serve static files from the "./public" directory
+app.use(express.static(__dirname + '/public'));
+
 app.use(
   auth({
     authRequired: false,
@@ -17,12 +20,13 @@ app.use(
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     secret: process.env.SECRET,
-  })  
+  })
 );
 
+// Define a route handler for the homepage
 app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-}); 
+  res.sendFile(__dirname + '/public/index.html');
+});
 
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user))
