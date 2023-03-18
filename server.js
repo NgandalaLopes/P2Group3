@@ -14,11 +14,11 @@ app.use(
   auth({
     authRequired: false,
     auth0Logout: true,
-    issuerBaseURL: process.env.ISSUER_BASE_URL,
-    baseURL: process.env.BASE_URL,
-    clientID: process.env.CLIENT_ID,
+    issuerBaseURL: 'https://dev-261nnksnma1nor5y.us.auth0.com',
+    baseURL: 'http://localhost:3000',
+    clientID: 'QaeXHGwxFB3ktDYXPYP8ORPipVgneXIp',
     clientSecret: process.env.CLIENT_SECRET,
-    secret: process.env.SECRET,
+    secret: 'FZTsGrPaqxmnNphYbBeKYPS3KLPitcgCGMSiggLzSRm-3UKubVfzd8jQ5Ap3AKL4',
   })
 );
 
