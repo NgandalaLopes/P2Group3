@@ -5,7 +5,7 @@
 
 ## Description
 
-Tech Blog is a full-stack web application that allows users to publish and read blog posts about technology topics. Users can sign up for an account, log in, create, edit, and delete blog posts, and leave comments on other users' posts.
+MISO is a full-stack web application that allows users to publish and read blog posts about technology topics. Users can sign up for an account, log in, create, edit, and delete blog posts, and leave comments on other users' posts.
 
 The application is built using Node.js, Express.js, Handlebars.js, and Sequelize ORM. It also uses bcrypt.js for password hashing, dotenv for environment variables, and express-session for user authentication.
 
@@ -54,4 +54,4 @@ There are currently no tests for this project
 
 ## Questions
 
-If you have any questions or issues with the application, please open an issue in the [Tech Blog repository](https://github.com/NgandalaLopes/P2Group3/issues) on GitHub.
+If you have any questions or issues with the application, please open an issue in the [MISO repository](https://github.com/NgandalaLopes/P2Group3/issues) on GitHub.
