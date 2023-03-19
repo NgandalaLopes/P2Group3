@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../models/Post');
+const sequelize = require('../../config/connection');
+const {Post, User} = require('../../models');
 
 // CREATE A NEW POST
 router.post('/', async (req, res) => {

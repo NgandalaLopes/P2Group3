@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const { auth, requiresAuth } = require('express-openid-connect');
+const bcrypt = require('bcrypt');
 
 class Post extends Model {}
 
