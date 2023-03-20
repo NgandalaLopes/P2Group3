@@ -1,5 +1,5 @@
 # Blog Webapp - Anime to Watch with Mum & Dad
-![My Image](https://github.com/NgandalaLopes/P2Group3/blob/main/img/logo2.png)
+![My Image](https://github.com/NgandalaLopes/P2Group3/blob/main/public/img/miso-anime-logo.png)
 # MISO
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
