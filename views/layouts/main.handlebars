@@ -4,20 +4,30 @@
     <title>MISO</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
     <style>
-      .hero.is-success .tabs li.is-active a {
+    .hero.is-success .tabs li.is-active a {
     color: #316ef7!important;
     opacity: 1;
-}
+    }
+        .misoicon { background-image: url("misoicon.png");
+          background-repeat: no-repeat;
+          width: 64px; height: 64px;
+          margin-top: 12px;
+          margin-left: 8px;
+    }
     </style>
 </head>
 <body>
  
   <nav class="navbar" role="navigation" aria-label="main navigation" style="margin-top: 15px !important;">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <a href="/" title="Return to Homepage"><img src="/img/rsz_miso-anime-logo.png" height="80" alt="Return to Homepage"></a>
+      <a class="navbar-item" href="">
+        <a href="/" title="Return to Homepage"><img src="./img/rsz_miso-anime-logo.png" height="80" alt="Return to Homepage"></a>
       </a>
   
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -87,7 +97,19 @@
           </p>
         </div>
         <div class="column">
-          <input class="input" type="text" placeholder="Text input">
+          <div class="container">
+            <div class="field has-addons">
+              <div class="control has-icons-left">
+                <input type="text"  class="input is-info is-large" placeholder="Get your favourite Anime">
+                <span class="icon is-medium is-left">
+                  <i class="misoicon"><img src="./img/misoicon.png"></i> 
+                </span>
+              </div>
+              <div class="control">
+                  <a class="button is-info is-large" style="background-color:#3ec487;">Search</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -237,8 +259,9 @@
       <nav class="tabs is-boxed is-fullwidth is-large" style="background-color: #316ef7; color: #fff;">
               <div class="container">
                 <ul>
-                  <li class="tab is-active" onclick="openTab(event,'WebDev')"><a >Eastern Anime</a></li>
-                  <li class="tab" onclick="openTab(event,'WebAud')"><a >Western Anime</a></li>
+                  <li class="tab is-active" onclick="openTab(event,'WebDev')"><a >Anime outside Japan</a></li>
+                  <li class="tab" onclick="openTab(event,'WebAud')"><a >European Anime</a></li>
+                  <li class="tab" onclick="openTab(event,'Support')"><a >Fun Facts</a></li>
                 </ul>
               </div>
             </nav>
@@ -267,8 +290,8 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        <strong>MISO</strong> by <a href="https://jgthms.com">Nicole Pendarvis, Brennon Sullivan, Mohammad Junaid Sattar & Ngandala Lopes</a>. The source code is licensed
-        <a href="http://opensource.org/licenses/mit-license.php">Github</a>.     <p>Copyright © My Blog 2022.</p>
+        <strong>MISO</strong> by <a href="">Nicole Pendarvis, Brennon Sullivan, Mohammad Junaid Sattar & Ngandala Lopes</a>. The source code is listed on
+        <a href="https://github.com/NgandalaLopes/P2Group3/tree/develop">Github</a>.     <p>Copyright © My Blog 2023.</p>
       </a>.
       </p>
     </div>
@@ -278,7 +301,7 @@
 
 <script>
   function openTab(evt, tabName) {
-  var i, x, tablinks;
+  let i, x, tablinks;
   x = document.getElementsByClassName("content-tab");
   for (i = 0; i < x.length; i++) {
       x[i].style.display = "none";
