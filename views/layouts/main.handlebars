@@ -24,65 +24,54 @@
 </head>
 <body>
  
-  <nav class="navbar" role="navigation" aria-label="main navigation" style="margin-top: 15px !important;">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="">
-        <a href="/" title="Return to Homepage"><img src="./img/rsz_miso-anime-logo.png" height="80" alt="Return to Homepage"></a>
+ <nav
+  class="navbar"
+  role="navigation"
+  aria-label="main navigation"
+  style="margin-top: 15px !important;"
+>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="">
+      <a href="/" title="Return to Homepage"><img
+          src="./img/rsz_miso-anime-logo.png"
+          height="80"
+          alt="Return to Homepage"
+        /></a>
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger"
+      aria-label="menu"
+      aria-expanded="false"
+      data-target="navbarBasicExample"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
       </a>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
+
     </div>
-  
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item">
-          Home
-        </a>
-  
-        <a class="navbar-item">
-          About
-        </a>
-  
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link">
-            More
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary" style="background-color: #316ef7;">
           </a>
-  
-          <div class="navbar-dropdown">
-            <a class="navbar-item">
-              Top 10
-            </a>
-            <a class="navbar-item">
-              Easy to learn
-            </a>
-            <a class="navbar-item">
-              Series
-            </a>
-            <hr class="navbar-divider">
-            <a class="navbar-item">
-              Report an issue
-            </a>
-          </div>
-        </div>
-      </div>
-  
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary" style="background-color: #316ef7;">
-              <strong>Dashboard</strong>
-            </a>
-            <a href="/login" class="button is-light">Login
-            </a>
-          </div>
+          <a href="/login" class="button is-light">Login
+          </a>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <section class="hero is-primary" style="margin-bottom: 80px; background-color: #316ef7;">
     <div class="hero-body">
