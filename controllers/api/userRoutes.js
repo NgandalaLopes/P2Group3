@@ -1,26 +1,29 @@
 const express = require('express');
 const router = express.Router();
-const sequelize = require('../../config/connection');
-const {Post, User, Comment} = require('../../models');
+const {User} = require('../../models');
 
 
-router.get('/', async (req, res) => {
-  User.findAll({
-    attributes: { exclude: ['password'] }
-  })
+router.post('/', async (req, res) => {
+  try{
+    const dbUserData = await User.create(req.body);
+  
+
+  // commented out blog data
+  // User.findAll({
+  //   attributes: { exclude: ['password'] }
+  // })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
     });
-});
+  };
 
 
-router.get('/:id', (req, res) => {
+router.post('/login', (req, res) => {
   User.findOne({
-    attributes: { exclude: ['password'] },
     where: {
-      id: req.params.id
+      email: req.params.email
     },
     include: [
       {
@@ -43,10 +46,9 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-    .then(dbUserData => {
       if (!dbUserData) {
-        res.status(404).json({ message: 'No user found with this id' });
-        return;
+        return res.status(404).json({ message: 'No User found!' });
+      
       }
       res.json(dbUserData);
     })
@@ -59,7 +61,6 @@ router.get('/:id', (req, res) => {
 router.post('/', async (req, res) => {
   try {
       const dbUserData = await User.create({
-          username: req.body.username,
           email: req.body.email,
           password: req.body.password
       });
