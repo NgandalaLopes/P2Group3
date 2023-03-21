@@ -1,7 +1,7 @@
-const router = require('express-session').router();
+const router = require('express').router();
 
-const apiRoutes = require('./api/');
-const homeRoutes = require('./homeroutes.js');
+const apiRoutes = require('./api');
+const homeRoutes = require('./home_routes.js');
 
 
 router.use('/', homeRoutes);
