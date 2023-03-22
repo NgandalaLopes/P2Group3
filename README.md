@@ -1,6 +1,6 @@
 # Blog Webapp - Anime to Watch with Mum & Dad
-![My Image](https://github.com/NgandalaLopes/P2Group3/blob/main/img/logo2.png)
-# MISO
+![My Image](https://github.com/NgandalaLopes/P2Group3/blob/main/public/img/miso-anime-logo.png)
+[MISO](https://miso-g3.herokuapp.com/) on Heroku
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Description
@@ -50,6 +50,14 @@ To contribute to this project, please follow these steps:
 4. Add and commit the changes (`git add . && git commit -m "Add my new feature"`)
 5. Push to the branch (`git push origin feature/my-new-feature`)
 6. Create a new Pull Request
+
+
+## Group contribution
+
+Ngandala - Front End/handlebbars
+Nicole - Route/Models
+Mo-Handlebars/api
+
 
 ## Tests
 

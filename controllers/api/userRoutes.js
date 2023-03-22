@@ -37,4 +37,22 @@ router.post('/login', async (req, res) => {
   }
 });
 
+router.post('/dashboard', async (req,res) =>{
+  try{
+    const dbUserData = await User.findByPk(req.session.user_id, {
+  }
+)
+
+
+router.post('/logout', (req, res) => {
+  if (req.session.login) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+
 module.exports = router;
