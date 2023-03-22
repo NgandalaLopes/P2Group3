@@ -48,6 +48,14 @@ To contribute to this project, please follow these steps:
 5. Push to the branch (`git push origin feature/my-new-feature`)
 6. Create a new Pull Request
 
+
+## Group contribution
+
+Ngandala - Front End/handlebbars
+Nicole - Route/Models
+Mo-Handlebars/api
+
+
 ## Tests
 
 There are currently no tests for this project
