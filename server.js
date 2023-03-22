@@ -1,4 +1,6 @@
+const path = require('path');
 const express = require('express');
+const exphbs = require('express-handlebars');
 const router = express.Router();
 const sequelize = require('./config/connection');
 require('dotenv').config();
