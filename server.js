@@ -11,7 +11,10 @@ const { auth, requiresAuth } = require('express-openid-connect');
 
 // Serve static files from the "./public" directory
 app.use(express.static(__dirname + '/public'));
+const hbs = exphbs.create({});
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 app.use(
   auth({
     authRequired: false,
