@@ -1,32 +1,20 @@
 
 {{> login-header}}
-  <div class="row">
-
-    <div class="container blogBox">
-      <div class="row justify-content-center headerRow">
-        <div class="col-8">
-          <h2>
-            <a
-              class="blogTitle text-uppercase"
-              href="/blog/{{blog.id}}"
-            >{{blog.title}}</a>
-          </h2>
+  <nav
+  class="navbar"
+  role="navigation"
+  aria-label="main navigation"
+  style="margin-top: 15px !important;"
+> 
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons"> 
+          <a href="/login" class="button is-light">Login</a>
         </div>
-
-        <div class="col-4">
-          <p class="blogCreate text-right">Created by
-            {{blog.user.username}}
-            on
-            {{format_date blog.date_created}}
-          </p>
-        </div>
-      </div>
-      <div class="blogDesc">
-        <p class="text-center blogDescMain">
-          {{blog.description}}
-        </p>
       </div>
     </div>
-
-  </div>
-
+</nav>
+<h1>welcome to</h1>
+<img src="../public/img/miso-anime-logo.png" alt="miso logo">
+<h2>Miso hbabababababababaababab</h2>
+<p>You must be logged in to search</p>
