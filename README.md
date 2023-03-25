@@ -9,9 +9,6 @@ MISO is a full-stack web application that allows users to publish and read blog 
 
 The application is built using Node.js, Express.js, Handlebars.js, and Sequelize ORM. It also uses bcrypt.js for password hashing, dotenv for environment variables, and express-session for user authentication.
 
-## Deploy
-
-[demo](https://miso.herokuapp.com/)
 
 ## Table of Contents
 
