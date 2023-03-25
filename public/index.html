@@ -55,10 +55,8 @@
             <a class="button is-primary" style="background-color: #316ef7;">
               <strong>Dashboard</strong>
             </a>
-            <a href="/login" class="button is-light">Login
-            </a>
-            <a href="/logout" id="logout-btn" class="button is-light">Logout
-            </a>
+            <a href="/login" id="login-btn" class="button is-light">Login</a>
+            <a href="/logout" id="logout-btn" class="button is-light">Logout </a>
           </div>
         </div>
       </div>
@@ -94,6 +92,7 @@
       </div>
     </div>
   </section>
+ 
 
   <footer class="footer">
     <div class="content has-text-centered">
@@ -107,21 +106,31 @@
  
 </div>
 </body>
-<script src="https://cdn.auth0.com/js/auth0/9.11/auth0.min.js"></script>
-
+ 
 <script>
-//  var logoutBtn = document.getElementById("logout-btn")
-// logoutBtn.addEventListener("click", function(){
-//   console.log("hello");
-//   var webAuth = new auth0.WebAuth({
-//     domain:       'dev-261nnksnma1nor5y.us.auth0.com',
-//     clientID:     'bvQzSwAHqM3zwzLj2Ap7ZQlKRvKWChl7'
-//   });
-  
-//   webAuth.logout({
-//     returnTo: '/logout',
-//     client_id: 'bvQzSwAHqM3zwzLj2Ap7ZQlKRvKWChl7'
-//   });
-// })
-  </script>
-</html>
+  const loginBtn = document.getElementById('login-btn');
+  const logoutBtn = document.getElementById('logout-btn');
+ 
+  // Add event listener to login button
+  loginBtn.addEventListener('click', () => {
+    // Set value in local storage
+    localStorage.setItem('isLoggedIn', true);
+  });
+  // Add event listener to logout button
+  logoutBtn.addEventListener('click', () => {
+    // Remove value from local storage
+    localStorage.removeItem('isLoggedIn');
+  });
+  // Check local storage value and hide/show buttons accordingly
+  if (localStorage.getItem('isLoggedIn')) {
+    loginBtn.style.display = 'none';
+    logoutBtn.style.display = 'block';
+  } else {
+    loginBtn.style.display = 'block';
+    logoutBtn.style.display = 'none';
+  }
+
+</script>
+
+
+ </html>
