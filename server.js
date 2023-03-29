@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const axios = require('axios');
 const router = express.Router();
 const sequelize = require('./config/connection');
 require('dotenv').config();
@@ -27,10 +28,14 @@ app.use(
   })
 );
 
-// Define a route handler for the homepage
-app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/index.html');
-});
+
+// Tells Express on which template engine to use
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/profile', requiresAuth(), (req, res) => {
   res.send(JSON.stringify(req.oidc.user))

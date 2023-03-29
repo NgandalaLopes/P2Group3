@@ -31,7 +31,7 @@
     "express-openid-connect": "^2.12.1",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.21",
+    "nodemon": "^2.0.22",
     "sequelize": "^6.3.5"
   }
 }

@@ -52,9 +52,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary" style="background-color: #316ef7;">
-              <strong>Dashboard</strong>
-            </a>
+            <!----<a class="button is-primary" style="background-color: #316ef7;"><strong>Dashboard</strong></a>!-->
             <a href="/login" id="login-btn" class="button is-light">Login</a>
             <a href="/logout" id="logout-btn" class="button is-light">Logout </a>
           </div>
@@ -130,6 +128,24 @@
     logoutBtn.style.display = 'none';
   }
 
+
+const dataContainer = document.getElementById('data-container');
+axios.get('https://api.jikan.moe/v4/anime')
+
+  .then(response => {
+    const data = response.data;
+    // Loop through the array of data and create an HTML template
+    const html = `
+      <ul>
+        ${data.map(item => `<li>${item.name}: ${item.value}</li>`).join('')}
+      </ul>
+    `;
+    // Append the HTML template to the container element
+    dataContainer.innerHTML = html;
+  })
+  .catch(error => {
+    console.error(error);
+  });
 </script>
 
 
